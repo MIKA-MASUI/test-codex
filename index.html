@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pink Spiral Punk</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Noto+Sans+JP:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="site-header">
+    <div class="logo">Pink Spiral Punk</div>
+    <nav class="site-nav">
+      <a href="#story">STORY</a>
+      <a href="#vibes">VIBES</a>
+      <a href="#mix">MIXTAPE</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h1 id="hero-title">ねじれたポップカルチャーの使者</h1>
+        <p>サブカルの迷路から飛び出した謎の生命体「Pink Spiral」。<br>渋谷の路地裏でピクセルとアナログを行き来する。夜明け前のネオンみたいに、君の感性をくすぐる存在。</p>
+        <a class="cta" href="#story">Decode the Myth</a>
+      </div>
+      <figure class="hero-figure">
+        <img src="assets/img/spiral-hero.svg" alt="ピンク色のスパイラルキャラクター" />
+        <figcaption>永遠にループする泡の戦士</figcaption>
+      </figure>
+    </section>
+
+    <section id="story" class="panel panel-story">
+      <h2>GHOST IN THE BUBBLE</h2>
+      <div class="panel-body">
+        <p>Pink Spiral は、カセットテープに封じ込められた<em>80年代ローファイ魂</em>が溶け出して出来たと言われている。都市伝説によると、満月の夜に不良電波を浴びると、ポップなテクスチャに染め上げられるらしい。</p>
+        <p>その体はシロップみたいに柔らかいが、内面はパンク。ハイゲインのギターリフに合わせて揺れるシルエットは、見る者すべての固定概念をカットアップする。</p>
+      </div>
+    </section>
+
+    <section id="vibes" class="panel panel-vibes" aria-labelledby="vibe-title">
+      <h2 id="vibe-title">SYNTHWAVE VIBES</h2>
+      <div class="vibes-grid">
+        <article class="vibe-card">
+          <h3>地下ギャラリー</h3>
+          <p>廃工場の壁にプロジェクションマッピング。Pink Spiral が現れるたびに壁のグラフィティが書き換わる。</p>
+        </article>
+        <article class="vibe-card">
+          <h3>エレクトロ夜行</h3>
+          <p>レコード針が走るノイズと、街灯のちらつきがシンクロする。足音はキラキラしたドラムンベース。</p>
+        </article>
+        <article class="vibe-card">
+          <h3>スイート・アナーキー</h3>
+          <p>砂糖菓子みたいなボディで革命を叫ぶ。甘いのに尖ってる、脳内レイブな存在。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="mix" class="panel panel-mix">
+      <h2>CASSETTE MIXTAPE</h2>
+      <div class="mix-grid">
+        <div class="mix-card">
+          <span class="mix-number">SIDE A</span>
+          <h3>Bubblegum Overdrive</h3>
+          <ul>
+            <li>Intro: Neon Static</li>
+            <li>Pink Spiral Anthem</li>
+            <li>Analog Dreamers</li>
+          </ul>
+        </div>
+        <div class="mix-card">
+          <span class="mix-number">SIDE B</span>
+          <h3>Noise Candy</h3>
+          <ul>
+            <li>City Pop Meltdown</li>
+            <li>Sugar Riot</li>
+            <li>Outro: Endless Loop</li>
+          </ul>
+        </div>
+        <div class="mix-card">
+          <span class="mix-number">BONUS</span>
+          <h3>Datastream Remix</h3>
+          <ul>
+            <li>Pink Spiral (8bit Edit)</li>
+            <li>Ghost in the Bubble (Chillwave)</li>
+            <li>Magnetic Nightcore</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="panel panel-contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">JOIN THE LOOP</h2>
+      <form class="contact-form">
+        <label>
+          E-mail
+          <input type="email" name="email" placeholder="spiral@underground.jp" required>
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="3" placeholder="君のサブカルな物語を共有して"></textarea>
+        </label>
+        <button type="submit">SEND PULSE</button>
+      </form>
+      <p class="contact-footnote">※ 本サイトはフィクションです。Pink Spiral はあなたの心の中に生息しています。</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2024 Pink Spiral Lab. All rights distorted.</p>
+  </footer>
+
+  <div class="cursor-orb" aria-hidden="true"></div>
+  <script>
+    const cursor = document.querySelector('.cursor-orb');
+    document.addEventListener('pointermove', (event) => {
+      cursor.style.transform = `translate3d(${event.clientX}px, ${event.clientY}px, 0)`;
+    });
+  </script>
+</body>
+</html>

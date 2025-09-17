@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600">
+  <defs>
+    <linearGradient id="body" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff9ff5" />
+      <stop offset="100%" stop-color="#ff5fd8" />
+    </linearGradient>
+    <filter id="outline" x="-5%" y="-5%" width="110%" height="110%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="out" />
+    </filter>
+  </defs>
+  <rect width="400" height="600" fill="none" />
+  <g stroke="#1f0029" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="url(#body)">
+    <path d="M200 70c-32 0-60 20-62 48-2 27 8 42-6 54s-36 30-36 62 20 48 18 70-24 36-22 70 26 54 26 78-24 54-18 86 44 62 100 62 96-30 100-64-18-48-16-84 26-46 26-78-18-44-22-70 16-44 16-70-22-44-36-54-8-28-12-50-30-50-56-50z" />
+    <path d="M180 100c-18 8-30 28-26 44s22 32 22 46-22 26-26 46 12 36 12 52-20 28-20 44 18 34 18 50-16 34-14 52 26 40 56 40 56-18 60-40-16-32-16-52 16-30 16-48-16-32-16-48 18-28 18-46-16-36-18-50-14-34-32-40-28-2-44 10z" fill="#ffb8ff" />
+  </g>
+  <g fill="#fdfdfd" stroke="#1f0029" stroke-width="10" stroke-linejoin="round">
+    <ellipse cx="170" cy="200" rx="38" ry="42" />
+    <ellipse cx="230" cy="200" rx="38" ry="42" />
+    <circle cx="180" cy="212" r="16" fill="#ffdd00" />
+    <circle cx="220" cy="212" r="16" fill="#ffdd00" />
+    <circle cx="182" cy="214" r="8" fill="#1f0029" />
+    <circle cx="218" cy="214" r="8" fill="#1f0029" />
+    <path d="M180 248s10 12 20 12 20-12 20-12" fill="none" stroke-linecap="round" />
+  </g>
+  <g stroke="#1f0029" stroke-width="12" stroke-linecap="round">
+    <path d="M118 340c-20 18-36 46-32 66s26 30 42 18 18-42 12-58-10-26-22-26z" fill="#ff71e7" />
+    <path d="M282 340c20 18 36 46 32 66s-26 30-42 18-18-42-12-58 10-26 22-26z" fill="#ff71e7" />
+    <path d="M150 500c-22 18-40 46-34 66s30 32 50 20 20-46 14-64-12-30-30-22z" fill="#ff69df" />
+    <path d="M250 500c22 18 40 46 34 66s-30 32-50 20-20-46-14-64 12-30 30-22z" fill="#ff69df" />
+  </g>
+</svg>
