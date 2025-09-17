@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CryptoNavigator | 仮想通貨ポータル</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero" id="top">
+    <div class="container hero__content">
+      <div>
+        <span class="badge">オールインワン仮想通貨情報ハブ</span>
+        <h1>CryptoNavigator</h1>
+        <p>
+          初心者から中級者まで、仮想通貨の学習・比較・最新トレンド追跡をワンストップで提供。
+          取引所・ウォレット・ニュース・AI分析を駆使して、次の一歩をサポートします。
+        </p>
+        <div class="hero__actions">
+          <a href="#exchanges" class="btn">取引所を比較</a>
+          <a href="#newsletter" class="btn btn--outline">最新情報を受け取る</a>
+        </div>
+      </div>
+      <div class="hero__panel">
+        <h3>今週の注目トピック</h3>
+        <ul>
+          <li>バイナンスの新規IEO「SolarGrid」参加チャンス</li>
+          <li>ETH上海アップグレード後のステーキング動向</li>
+          <li>ハードウェアウォレット最新セール情報</li>
+        </ul>
+        <a class="panel__link" href="#insider">インサイダー向け裏技へ →</a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <div class="container nav__content">
+      <a href="#top" class="nav__logo">CN</a>
+      <div class="nav__links">
+        <a href="#exchanges">取引所</a>
+        <a href="#coins">仮想通貨事典</a>
+        <a href="#fresh">新着</a>
+        <a href="#ai-insight">AI分析</a>
+        <a href="#blog">ブログ</a>
+        <a href="#insider">裏技</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="exchanges" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>取引所比較ハブ</h2>
+          <p>手数料・キャンペーン・特徴から最適な取引所を絞り込みましょう。</p>
+        </div>
+        <div class="filter">
+          <label for="exchange-filter">主な目的で絞り込む:</label>
+          <select id="exchange-filter">
+            <option value="all">すべて</option>
+            <option value="beginner">初心者向け</option>
+            <option value="defi">DeFi対応</option>
+            <option value="nft">NFTマーケット</option>
+            <option value="pro">ハイレバレッジ</option>
+          </select>
+        </div>
+        <div class="cards" id="exchange-cards">
+          <article class="card" data-tags="beginner">
+            <h3>コインチェック</h3>
+            <ul>
+              <li>スプレッド重視のシンプルUI</li>
+              <li>キャンペーン: 初回入金で2000円分BTCプレゼント</li>
+              <li>取扱銘柄: BTC/ETH/LSK 他25種</li>
+            </ul>
+            <a class="btn btn--sm" href="#">口座開設はこちら</a>
+          </article>
+          <article class="card" data-tags="pro defi">
+            <h3>バイナンス</h3>
+            <ul>
+              <li>取引手数料0.1%～。BNB保有で割引</li>
+              <li>キャンペーン: Launchpad「SolarGrid」参加権</li>
+              <li>特徴: DeFi・NFT・先物・レンディングを網羅</li>
+            </ul>
+            <a class="btn btn--sm" href="#">今すぐ参加</a>
+          </article>
+          <article class="card" data-tags="defi">
+            <h3>Bybit</h3>
+            <ul>
+              <li>高流動性のデリバティブ取引</li>
+              <li>キャンペーン: 紹介コードで入金額10%ボーナス</li>
+              <li>特徴: コピー取引・資産運用ツールが充実</li>
+            </ul>
+            <a class="btn btn--sm" href="#">詳細を見る</a>
+          </article>
+          <article class="card" data-tags="nft beginner">
+            <h3>ビットフライヤー</h3>
+            <ul>
+              <li>初心者でも安心の国内大手</li>
+              <li>キャンペーン: 友達紹介でBTC5000円分</li>
+              <li>特徴: 独自NFTマーケットプレイス「bafy」</li>
+            </ul>
+            <a class="btn btn--sm" href="#">今すぐ登録</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="coins" class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <h2>ジャンル別仮想通貨事典</h2>
+          <p>ミーム・アルト・ステーブルなどカテゴリごとに整理。検索で目的のコインを探せます。</p>
+        </div>
+        <div class="search">
+          <input id="coin-search" type="search" placeholder="コイン名やカテゴリで検索" />
+        </div>
+        <div class="grid" id="coin-grid">
+          <article class="tile" data-name="dogecoin" data-tags="meme">
+            <h3>Dogecoin (DOGE)</h3>
+            <p>ミームコインの代表格。コミュニティドリブンで、決済導入が徐々に進行。</p>
+            <span class="tag">#ミーム</span>
+          </article>
+          <article class="tile" data-name="solana" data-tags="defi nft">
+            <h3>Solana (SOL)</h3>
+            <p>高速・低コストのL1。DeFiやNFTエコシステムが拡大中。</p>
+            <span class="tag">#アルト</span>
+          </article>
+          <article class="tile" data-name="arbitrum" data-tags="defi layer2">
+            <h3>Arbitrum (ARB)</h3>
+            <p>EthereumのLayer2。手数料削減と高速化でDeFiの人気が上昇。</p>
+            <span class="tag">#Layer2</span>
+          </article>
+          <article class="tile" data-name="usdc" data-tags="stable">
+            <h3>USD Coin (USDC)</h3>
+            <p>米ドル連動型ステーブルコイン。透明性とコンプライアンスに注力。</p>
+            <span class="tag">#ステーブル</span>
+          </article>
+          <article class="tile" data-name="pepe" data-tags="meme">
+            <h3>Pepe (PEPE)</h3>
+            <p>ミームコミュニティ発のトークン。SNSでのバズを活かした拡散が武器。</p>
+            <span class="tag">#ミーム</span>
+          </article>
+          <article class="tile" data-name="chainlink" data-tags="defi oracle">
+            <h3>Chainlink (LINK)</h3>
+            <p>分散型オラクルネットワーク。スマートコントラクトに外部データを提供。</p>
+            <span class="tag">#インフラ</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="fresh" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>新規上場＆注目プロジェクト速報</h2>
+          <p>話題のIEO/IDOや急上昇トークンの注目ポイントをいち早くキャッチ。</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline__item">
+            <span class="timeline__date">4/12</span>
+            <div>
+              <h3>SolarGrid (SLR)</h3>
+              <p>再生可能エネルギー発電量をトークナイズ。Binance Launchpadでトークン販売開始。</p>
+              <a href="#" class="text-link">詳細と参加方法</a>
+            </div>
+          </div>
+          <div class="timeline__item">
+            <span class="timeline__date">4/18</span>
+            <div>
+              <h3>NeoDex (NDEX)</h3>
+              <p>AI自動化を備えたDEX。上場直後からTVL 5000万ドル突破。</p>
+              <a href="#" class="text-link">注目ポイントを見る</a>
+            </div>
+          </div>
+          <div class="timeline__item">
+            <span class="timeline__date">4/24</span>
+            <div>
+              <h3>MetaVerseX (MVX)</h3>
+              <p>メタバース向けのインタラクティブNFTマーケット。Epic Gamesと提携発表。</p>
+              <a href="#" class="text-link">IEOスケジュール</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="ai-insight" class="section section--alt">
+      <div class="container ai">
+        <div class="ai__content">
+          <div class="section__head">
+            <h2>AIによるBTC動向シナリオ</h2>
+            <p>価格データ・オンチェーン指標・マクロ情報を学習した独自モデルがシナリオを提示。</p>
+          </div>
+          <div class="ai__scenarios">
+            <div class="scenario">
+              <h3>強気シナリオ（45%）</h3>
+              <p>ETF資金流入とハッシュレート上昇が継続。来月の目標価格は <strong>￥9,800,000</strong>。</p>
+            </div>
+            <div class="scenario">
+              <h3>中立シナリオ（35%）</h3>
+              <p>マクロイベント待ちのレンジ推移。サポート帯は <strong>￥8,400,000</strong>。</p>
+            </div>
+            <div class="scenario">
+              <h3>弱気シナリオ（20%）</h3>
+              <p>金利上昇がリスク資産を圧迫。主要サポート割れで <strong>￥7,500,000</strong> まで調整。</p>
+            </div>
+          </div>
+          <a class="btn" href="#newsletter">週次レポートを購読</a>
+        </div>
+        <div class="ai__chart">
+          <h3>今週のテクニカル指標</h3>
+          <ul>
+            <li>200日移動平均: 価格が6%上回る</li>
+            <li>RSI: 58（中立〜強気）</li>
+            <li>ネットポジション変化: クジラの保有量 +2.4%</li>
+            <li>為替相関: DXYとの相関 -0.32</li>
+          </ul>
+          <p class="note">※AIモデルは4時間ごとに更新。登録ユーザーは詳細レポートにアクセス可能。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>最新記事＆ハウツー</h2>
+          <p>仮想通貨の基礎から税金対策、ステーキング戦略まで幅広く解説。</p>
+        </div>
+        <div class="blog">
+          <article>
+            <h3>【保存版】初めてのビットコイン購入ガイド</h3>
+            <p>ウォレット準備から取引所登録、初回取引のポイントを初心者向けに丁寧に解説。</p>
+            <a href="#" class="text-link">読む →</a>
+          </article>
+          <article>
+            <h3>アルトコイン投資で押さえるべき5つの指標</h3>
+            <p>時価総額、FDV、ロックアップ率、開発アクティビティ、コミュニティ熱量を分析。</p>
+            <a href="#" class="text-link">読む →</a>
+          </article>
+          <article>
+            <h3>DeFiで利回りを最大化する裏技ポートフォリオ</h3>
+            <p>レンディング、ステーキング、リキッドステーキングの組み合わせ戦略を公開。</p>
+            <a href="#" class="text-link">読む →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="insider" class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <h2>インサイダー向け裏技＆ツール</h2>
+          <p>アフィリエイト収益とユーザー満足度を高める秘策をまとめました。</p>
+        </div>
+        <div class="grid grid--two">
+          <article class="tile">
+            <h3>エアドロップカレンダー</h3>
+            <p>条件・締切・必要タスクをリスト化。メールリマインド機能で参加率アップ。</p>
+            <a href="#" class="text-link">テンプレートをダウンロード</a>
+          </article>
+          <article class="tile">
+            <h3>税金対策ツール</h3>
+            <p>損益通算シートと確定申告チェックリストで税務の不安を解消。</p>
+            <a href="#" class="text-link">税理士を紹介</a>
+          </article>
+          <article class="tile">
+            <h3>ゲーミフィケーション企画</h3>
+            <p>ユーザー投票で注目アルトを決定。参加者には限定NFTやポイントを付与。</p>
+            <a href="#" class="text-link">企画の成功事例</a>
+          </article>
+          <article class="tile">
+            <h3>API連携ダッシュボード</h3>
+            <p>DeFi利回りとレンディング金利を自動更新。スポンサー枠で広告枠を創出。</p>
+            <a href="#" class="text-link">プロトタイプを見る</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="newsletter" class="section newsletter">
+      <div class="container newsletter__card">
+        <div>
+          <h2>週次ニュースレターを購読</h2>
+          <p>最新ニュース、AIシナリオ、限定キャンペーン情報をメールでお届け。</p>
+        </div>
+        <form class="newsletter__form">
+          <input type="email" placeholder="メールアドレス" required />
+          <button type="submit" class="btn">登録する</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <div>
+        <h3>CryptoNavigator</h3>
+        <p>仮想通貨の学習から投資判断まで、信頼できる情報でサポートします。</p>
+      </div>
+      <div class="footer__links">
+        <a href="#">運営会社</a>
+        <a href="#">広告掲載</a>
+        <a href="#">プライバシーポリシー</a>
+      </div>
+    </div>
+    <p class="footer__copy">© 2024 CryptoNavigator. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
